@@ -1,0 +1,22 @@
+[package]
+name = "mqtt2jsons2stdout"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.rs-mqtt2jsons]
+path = "../../.."
+
+[dependencies.tokio]
+version = "1.46.1"
+default-features = false
+features = [
+	"macros",
+	"rt-multi-thread",
+]
+
